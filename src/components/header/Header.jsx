@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import styles from "./Header.module.css";
 
 function Header({ quanity }) {
   return (
     <>
-      <header>
-        <div>
+      <header className={styles.header}>
+        <div className={styles.titleLogo}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

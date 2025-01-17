@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(71, 133, 0, 0.877);
+}
+
+.titleLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 25px;
+  color: white;
+  gap: 10px;
+}
+
+.titleLogo svg {
+  padding-bottom: 9px;
+  fill: white;
+}
