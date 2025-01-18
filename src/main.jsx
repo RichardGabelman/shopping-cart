@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css'
 import App from './components/App/App.jsx';
-import Home from './components/home/Home.jsx';
-import Shop from './components/shop/Shop.jsx';
-import Cart from './components/cart/Cart.jsx';
+import Home from './components/Home/Home.jsx';
+import Shop from './components/Shop/Shop.jsx';
+import Cart from './components/Cart/Cart.jsx';
 
 const router = createBrowserRouter([
   {
