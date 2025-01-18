@@ -1,22 +1,18 @@
 import styles from "./Product.module.css";
 
-function Product({ product }) {
-  const id = product.id;
-  const title = product.title;
-  const image = product.image;
-  const price = product.price;
-  const quantity = product.quantity;
+function Product({ product, updateProductQuantity }) {
+  const { id, title, image, price, quantity } = product;
 
 
   return(
     <article className={styles.productCard}>
       <img src={image} alt={title} className={styles.productImage}/>
       <h2>{title}</h2>
-      <p>${price}</p>
+      <p>${price.toFixed(2)}</p>
       <div className={styles.qtyContainer}>
-        <button>-</button>
+        <button onClick={() => updateProductQuantity(id, -1)}>-</button>
         <p>{quantity}</p>
-        <button>+</button>
+        <button onClick={() => updateProductQuantity(id, 1)}>+</button>
       </div>
     </article>
   );

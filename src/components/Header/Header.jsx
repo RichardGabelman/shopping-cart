@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
-function Header({ quanity }) {
+function Header({ quantity }) {
   return (
     <>
       <header className={styles.header}>
-        <Link to="/" className={styles.link}>
+        <Link to="/">
           <div className={styles.titleLogo}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ function Header({ quanity }) {
             <li className={styles.li}>
               <Link to="cart" className={styles.link}>
                 <div className={styles.cartLink}>
-                  <div className={styles.quanityBackground}>{quanity}</div>
+                  <div className={styles.quantityBackground}>{quantity}</div>
                   Cart
                 </div>
               </Link>

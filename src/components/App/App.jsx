@@ -29,11 +29,21 @@ function App() {
     0
   );
 
+  const updateProductQuantity = (id, delta) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === id
+          ? { ...product, quantity: Math.max(product.quantity + delta, 0) }
+          : product
+      )
+    );
+  };
+
   return (
     <>
-      <Header quanity={quantityInCart} />
+      <Header quantity={quantityInCart} />
       <main>
-        <Outlet context={products} />
+        <Outlet context={{products, updateProductQuantity}} />
       </main>
       <footer>
         <div>Copyright &copy; {new Date().getFullYear()} Richard Gabelman</div>
