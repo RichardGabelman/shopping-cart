@@ -7,8 +7,13 @@ function App() {
   const [quantityInCart, setQuanityInCart] = useState(0);
   return (
     <>
-      <Header quanity={quantityInCart}/>
-      <Outlet />
+      <Header quanity={quantityInCart} />
+      <main>
+        <Outlet />
+      </main>
+      <footer>
+        <div>Copyright &copy; {new Date().getFullYear()} Richard Gabelman</div>
+      </footer>
     </>
   );
 }
