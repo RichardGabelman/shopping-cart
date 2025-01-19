@@ -3,10 +3,9 @@ import styles from "./Product.module.css";
 function Product({ product, updateProductQuantity }) {
   const { id, title, image, price, quantity } = product;
 
-
-  return(
+  return (
     <article className={styles.productCard}>
-      <img src={image} alt={title} className={styles.productImage}/>
+      <img src={image} alt={title} className={styles.productImage} />
       <h2>{title}</h2>
       <p>${price.toFixed(2)}</p>
       <div className={styles.qtyContainer}>
