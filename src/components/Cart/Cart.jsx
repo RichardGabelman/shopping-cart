@@ -56,7 +56,7 @@ function Cart() {
           <div className={styles.lines}>
             <div className={styles.summaryLine}>
               <h3>Subtotal:</h3>
-              <p>${subtotal}</p>
+              <p>${subtotal.toFixed(2)}</p>
             </div>
             <div className={styles.summaryLine}>
               <h3>Taxes:</h3>

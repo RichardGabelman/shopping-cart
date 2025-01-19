@@ -72,7 +72,7 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
-  gap: 12px;
+  gap: 10px;
 }
 
 .quantityBackground {
@@ -83,6 +83,6 @@
   background-color: white;
   color: black;
   font-size: .65em;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 35px;
 }
