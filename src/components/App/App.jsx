@@ -39,11 +39,19 @@ function App() {
     );
   };
 
+  const checkout = () => {
+    const resetProducts = products.map((product) => ({
+      ...product,
+      quantity: 0,
+    }));
+    setProducts(resetProducts);
+  };
+
   return (
     <>
       <Header quantity={quantityInCart} />
       <main>
-        <Outlet context={{products, updateProductQuantity}} />
+        <Outlet context={{products, updateProductQuantity, checkout}} />
       </main>
       <footer>
         <div>Copyright &copy; {new Date().getFullYear()} Richard Gabelman</div>
