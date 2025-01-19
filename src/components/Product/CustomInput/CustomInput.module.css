@@ -1,0 +1,14 @@
+.qtyContainer {
+  display: flex;
+}
+
+.input {
+  width: 5ch;
+  text-align: center;
+}
+
+.input::-webkit-inner-spin-button, 
+.input::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

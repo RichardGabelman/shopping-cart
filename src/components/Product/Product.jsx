@@ -1,18 +1,23 @@
+import { useState } from "react";
 import styles from "./Product.module.css";
+import CustomInput from "./CustomInput/CustomInput.jsx";
 
 function Product({ product, updateProductQuantity }) {
-  const { id, title, image, price, quantity } = product;
+  const { id, title, image, price } = product;
+  const [amount, setAmount] = useState(0);
+
+  const handleAdd = () => {
+    updateProductQuantity(id, amount);
+    setAmount(0);
+  };
 
   return (
     <article className={styles.productCard}>
       <img src={image} alt={title} className={styles.productImage} />
       <h2>{title}</h2>
       <p>${price.toFixed(2)}</p>
-      <div className={styles.qtyContainer}>
-        <button onClick={() => updateProductQuantity(id, -1)}>-</button>
-        <p>{quantity}</p>
-        <button onClick={() => updateProductQuantity(id, 1)}>+</button>
-      </div>
+      <CustomInput amount={amount} setAmount={setAmount}></CustomInput>
+      <button onClick={handleAdd}>Add to Cart</button>
     </article>
   );
 }

@@ -25,9 +25,3 @@
 .productCard > .productImage {
   width: 90px;
 }
-
-.qtyContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
