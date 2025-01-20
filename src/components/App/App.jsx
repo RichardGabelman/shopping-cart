@@ -6,6 +6,27 @@ import { Outlet } from "react-router-dom";
 function App() {
   const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    const fetchDataForProducts = async () => {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) {
+          throw new Error(`HTTP error: Status ${response.status}`);
+        }
+        let productData = await response.json();
+        productData = productData.map((product) => ({
+          ...product,
+          quantity: 0,
+        }));
+        setProducts(productData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchDataForProducts();
+  }, []);
+
   const quantityInCart = products.reduce(
     (sum, product) => sum + product.quantity,
     0
@@ -28,27 +49,6 @@ function App() {
     }));
     setProducts(resetProducts);
   };
-
-  useEffect(() => {
-    const fetchDataForProducts = async () => {
-      try {
-        const response = await fetch("https://fakestoreapi.com/products");
-        if (!response.ok) {
-          throw new Error(`HTTP error: Status ${response.status}`);
-        }
-        let productData = await response.json();
-        productData = productData.map((product) => ({
-          ...product,
-          quantity: 0,
-        }));
-        setProducts(productData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    fetchDataForProducts();
-  }, []);
 
   return (
     <>
