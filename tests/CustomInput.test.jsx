@@ -12,4 +12,12 @@ describe("CustomInput", () => {
     const input = screen.getByRole("spinbutton");
     expect(input).toHaveValue(initialAmount);
   });
+  it("renders correctly (snapshot)", () => {
+    const setAmount = vi.fn();
+    const initialAmount = 0;
+
+    const {container} = render(<CustomInput amount={initialAmount} setAmount={setAmount} />);
+
+    expect(container).toMatchSnapshot();
+  });
 });

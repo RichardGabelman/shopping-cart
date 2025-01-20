@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CustomInput > renders correctly (snapshot) 1`] = `
+<div>
+  <div
+    class="_qtyContainer_e2dd4f"
+  >
+    <button>
+      -
+    </button>
+    <input
+      class="_input_e2dd4f"
+      type="number"
+      value="0"
+    />
+    <button>
+      +
+    </button>
+  </div>
+</div>
+`;
