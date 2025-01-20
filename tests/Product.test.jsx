@@ -42,4 +42,12 @@ describe("Product", () => {
 
     expect(amountInput).toHaveValue(0);
   });
+  it("renders correctly (snapshot)", () => {
+    const product = { id: 1, title: "First Item", image: "/img.png", price: 1.50};
+    const updateProductQuantity = vi.fn();
+
+
+    const { container } = render(<Product product={product} updateProductQuantity={updateProductQuantity}/>);
+    expect(container).toMatchSnapshot();
+  });
 })

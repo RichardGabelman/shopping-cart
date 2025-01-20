@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Product > renders correctly (snapshot) 1`] = `
+<div>
+  <article
+    class="_productCard_3c78d5"
+  >
+    <img
+      alt="First Item"
+      class="_productImage_3c78d5"
+      src="/img.png"
+    />
+    <h2>
+      First Item
+    </h2>
+    <p>
+      $
+      1.50
+    </p>
+    <div
+      class="_qtyContainer_e2dd4f"
+    >
+      <button>
+        -
+      </button>
+      <input
+        class="_input_e2dd4f"
+        type="number"
+        value="0"
+      />
+      <button>
+        +
+      </button>
+    </div>
+    <button>
+      Add to Cart
+    </button>
+  </article>
+</div>
+`;
