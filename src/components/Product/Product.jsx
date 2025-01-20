@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Product.module.css";
 import CustomInput from "./CustomInput/CustomInput.jsx";
+import PropTypes from "prop-types";
 
 function Product({ product, updateProductQuantity }) {
   const { id, title, image, price } = product;
@@ -20,6 +21,11 @@ function Product({ product, updateProductQuantity }) {
       <button onClick={handleAdd}>Add to Cart</button>
     </article>
   );
+}
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  updateProductQuantity: PropTypes.func.isRequired,
 }
 
 export default Product;

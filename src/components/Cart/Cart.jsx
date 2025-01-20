@@ -4,7 +4,7 @@ import styles from "./Cart.module.css";
 const TAX_RATE = 0.1;
 
 function Cart() {
-  const { products, updateProductQuantity, checkout } = useOutletContext();
+  const { products, checkout } = useOutletContext();
 
   const subtotal = products.reduce(
     (sum, product) => sum + product.quantity * product.price,

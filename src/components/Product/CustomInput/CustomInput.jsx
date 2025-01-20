@@ -1,5 +1,5 @@
-import { useState } from "react";
 import styles from "./CustomInput.module.css";
+import PropTypes from "prop-types";
 
 function CustomInput({ amount, setAmount }) {
   const updateAmount = (delta) => {
@@ -18,6 +18,11 @@ function CustomInput({ amount, setAmount }) {
       <button onClick={() => updateAmount(1)}>+</button>
     </div>
   );
+}
+
+CustomInput.propTypes = {
+  amount: PropTypes.number.isRequired,
+  setAmount: PropTypes.func.isRequired,
 }
 
 export default CustomInput;
