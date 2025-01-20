@@ -4,8 +4,7 @@ import userEvent from "@testing-library/user-event";
 import Cart from "../src/components/Cart/Cart";
 
 describe("Cart", () => {
-  it("renders correctly with the initial amount", () => {
-    const initialAmount = 5;
+  it("", () => {
     expect(true).toBe(true);
   });
 });

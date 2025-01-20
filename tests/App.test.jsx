@@ -4,8 +4,7 @@ import userEvent from "@testing-library/user-event";
 import App from "../src/components/App/App";
 
 describe("App", () => {
-  it("renders correctly with the initial amount", () => {
-    const initialAmount = 5;
+  it("", () => {
     expect(true).toBe(true);
   });
 });
